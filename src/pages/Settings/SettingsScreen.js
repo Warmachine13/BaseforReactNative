@@ -18,12 +18,7 @@ class SettingsScreen extends Component {
 
   submit() {
     this.context.logout();
-    Navigation.push(this.props.componentId, {
-      // stack: require('routes/main'),
-      component: {
-        name: 'Sign',
-      },
-    });
+    Navigation.setRoot(require('routes/auth').loginRoot);
     // Navigation.push
     // if (this.emailRef?.current?.focus() !== null) {
     //   console.log(1);

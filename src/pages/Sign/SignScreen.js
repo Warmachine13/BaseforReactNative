@@ -30,12 +30,7 @@ class SignScreen extends Component {
       sessionToken: 'apsodhfp',
     };
     this.context.setUser(form);
-    Navigation.push(this.props.componentId, {
-      // stack: require('routes/main'),
-      component: {
-        name: 'Home',
-      },
-    });
+    Navigation.setRoot(require('routes/main').mainRoot);
   }
   render() {
     return (
